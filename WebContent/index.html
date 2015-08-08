@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>Insert title</title>
+		<!-- j Query -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- Boot Strap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!-- Angular js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-aria.min.js"></script>
+
+		<!-- CSS files -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script src="script.js"></script>    
+	</head>
+	<body>
+	
+	
+	
+		<div id="mainContainer"class = "container">
+			
+			<!-- Heading of the project -->
+			<div id="jumbotron" class="jumbotron">
+				<div class="container">
+					<h1 id="projectName">share Q</h1>
+			
+					<p id='mainHead'>
+					<b>Hello! Welcome to the ShareQ.com
+					This is simple web-site to share or rent your world.</b>
+					</p>
+			
+					<a id ="learnMore" role="button" class="btn btn=primary btn-lg" href="#"> Learn more » </a>		
+				</div>
+			</div>
+		
+			<!-- Route controls -->
+			<div class="container" ng-controller="AppController">
+		
+				<ul id="rentmyAccount" class="nav nav-pills">
+  					<li role="presentation" ng-class="shareActive"><a href="#share">Share For Rent</a></li>
+  					<li role="presentation" ng-class="myaccountActive"><a href="#myaccount">My Account</a></li>
+				</ul>
+		
+				<div id="view" ng-view="">
+				</div>
+			</div>
+
+
+		</div>
+	</body>
+</html>
